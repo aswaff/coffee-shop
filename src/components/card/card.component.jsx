@@ -16,7 +16,7 @@ export const Card = () => {
                     {item.price}
                 </div>
                 <div className="card-cart">
-
+                    Add to Cart
                 </div>
             </div>
         )}

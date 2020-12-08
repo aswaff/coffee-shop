@@ -31,4 +31,20 @@
 .card-price {
     font-family: Georgia,Times,Times New Roman,serif;
     align-self: center;
+    font-size: larger;
+}
+
+.card-cart {
+    text-align: center;
+    padding: 20px;
+    background: #bb9167;
+    max-width: 10em;
+    color: white;
+    align-self: center;
+    margin: 15px;
+}
+
+.card-cart:hover {
+    background: #e6b380;
+    cursor: pointer;
 }
