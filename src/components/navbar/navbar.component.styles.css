@@ -1,0 +1,35 @@
+a:link {
+    text-decoration: none;
+}
+
+.navbar-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 1em 5em 2em 5em;
+    background-color: rgb(218 218 218 / 41%);
+}
+
+.navbar-logo {
+    font-size: 3em;
+    padding: 5px;
+}
+
+.navbar-logo a {
+    text-shadow: 2px 4px black;
+}
+
+.navbar-links {
+    margin-left: auto;
+    padding: 5px;
+    font-size: 1.3em;
+}
+
+.navbar-link {
+    margin: 5px;
+    color: black;
+}
+
+.navbar-cart {
+    margin: 5px;
+    font-size: 1.5em;
+}

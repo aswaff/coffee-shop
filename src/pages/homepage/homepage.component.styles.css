@@ -1,0 +1,41 @@
+.homepage-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.homepage-wrapper img {
+    max-width: 26em;
+    margin: auto;
+}
+
+.homepage-text {
+    margin: 4em 1em 1em 1em;
+    font-family: Georgia,Times,Times New Roman,serif; 
+    font-size: large;
+    text-align: center;
+    display: flex;
+    color: #6f6f6f;
+}
+
+.homepage-text h2 {
+    color: #682d02;;
+}
+
+
+
+.homepage-coffee {
+    margin: 1em;
+}
+
+.coffeepic {
+    font-size: 3em;
+}
+
+.homepage-donut {
+    margin: 1em;
+}
+
+.donutpic {
+    font-size: 3em;
+}
+
