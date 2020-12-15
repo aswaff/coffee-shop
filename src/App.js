@@ -11,16 +11,17 @@ import { NavBar } from './components/navbar/navbar.component'
 import { HomePage } from './pages/homepage/homepage.component'
 import { About } from './pages/about/about.component'
 import { Order } from './pages/order/order.component'
+import { Cart } from './pages/cart/cart.component'
 
 function App() {
   return (
     <Router>
       <div className="App">
         <NavBar />
-
-
-
         <Switch>
+            <Route path="/cart">
+              <Cart />
+            </Route>
             <Route path="/about">
               <About />
             </Route>
