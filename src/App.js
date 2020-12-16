@@ -12,6 +12,7 @@ import { HomePage } from './pages/homepage/homepage.component'
 import { About } from './pages/about/about.component'
 import { Order } from './pages/order/order.component'
 import { Cart } from './pages/cart/cart.component'
+import store from "./redux/store";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
               <HomePage />
             </Route>
           </Switch>
-
+      {console.log(store)}
       </div>
 
     </Router>
