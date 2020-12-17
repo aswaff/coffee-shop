@@ -1,6 +1,11 @@
 import './card.styles.css'
 import cardData from './card.data'
 
+import {
+    addToCart
+} from '../../redux/actions'
+import { connect } from 'react-redux'
+
 export const Card = () => {
     return (
         <div className="card-wrapper">
@@ -15,7 +20,7 @@ export const Card = () => {
                 <div className="card-price">
                     {item.price}
                 </div>
-                <div className="card-cart">
+                <div className="card-cart" onClick={() => addToCart(item.id)}>
                     Add to Cart
                 </div>
             </div>
@@ -23,3 +28,5 @@ export const Card = () => {
         </div>
     )
 }
+
+export default connect()(Card)
