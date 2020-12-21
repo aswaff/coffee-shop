@@ -20,9 +20,9 @@ export const Card = () => {
                 <div className="card-price">
                     {item.price}
                 </div>
-                <div className="card-cart" onClick={() => addToCart(item.id)}>
+                <button className="card-cart" onClick={() => addToCart(item.id), console.log(item.id)}>
                     Add to Cart
-                </div>
+                </button>
             </div>
         )}
         </div>
