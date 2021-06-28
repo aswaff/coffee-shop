@@ -1,12 +1,14 @@
 import './card.styles.css'
 import cardData from './card.data'
+import React, { useState } from 'react';
 
 import {
     addToCart
 } from '../../redux/actions'
 import { connect } from 'react-redux'
 
-export const Card = () => {
+export const Card = (props) => {
+    const [cart, setCart] = useState(0);
     return (
         <div className="card-wrapper">
             {cardData.map(item => 
@@ -20,10 +22,12 @@ export const Card = () => {
                 <div className="card-price">
                     {item.price}
                 </div>
-                <button className="card-cart" onClick={() => console.log(item.id)}>
+                <button className="card-cart" onClick={() => {setCart(item.id); console.log({cart})}}>
                     Add to Cart
                 </button>
+                {/* {console.log({cart})} */}
             </div>
+            
         )}
         </div>
     )
