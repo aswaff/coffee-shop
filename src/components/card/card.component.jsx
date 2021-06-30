@@ -8,7 +8,7 @@ import {
 import { connect } from 'react-redux'
 
 export const Card = (props) => {
-    const [cart, setCart] = useState(0);
+    const [cart, setCart] = useState([]);
     return (
         <div className="card-wrapper">
             {cardData.map(item => 
@@ -22,7 +22,7 @@ export const Card = (props) => {
                 <div className="card-price">
                     {item.price}
                 </div>
-                <button className="card-cart" onClick={() => {setCart(item.id); console.log({cart})}}>
+                <button className="card-cart" onClick={() => {setCart([...cart, item]); console.log({cart})}}>
                     Add to Cart
                 </button>
                 {/* {console.log({cart})} */}
