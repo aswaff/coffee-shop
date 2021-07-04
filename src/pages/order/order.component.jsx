@@ -1,8 +1,9 @@
 import './order.styles.css'
 import { Card } from '../../components/card/card.component'
+import React, { useState } from 'react';
 
-export const Order = () => {
+export const Order = (cartValue) => {
     return (
-            <Card />
+            <Card cart={cartValue}/>
     )
 }
