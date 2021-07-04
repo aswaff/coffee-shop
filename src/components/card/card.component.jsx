@@ -1,6 +1,6 @@
 import './card.styles.css'
 import cardData from './card.data'
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {CartContext} from "../../cartContext";
 
 import {
@@ -13,6 +13,7 @@ export const Card = () => {
     // let cart = CartContext
     // <CartContext.Consumer>
     return (
+        
         <div className="card-wrapper">
             {cardData.map(item => 
             <div className="card">
@@ -26,7 +27,8 @@ export const Card = () => {
                     {item.price}
                 </div>
                 
-                <button className="card-cart" onClick={() => setCartList(cartList => [...cartList, item], console.log(cartList)) }>
+                <button className="card-cart" onClick={() =>  
+                     setCartList(cartList => [...cartList, item], console.log(cartList)) }>
                     Add to Cart
                 </button>
                

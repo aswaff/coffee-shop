@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 
 import './App.css';
 import { NavBar } from './components/navbar/navbar.component'
@@ -18,14 +18,22 @@ import { Cart } from './pages/cart/cart.component'
 import {CartContext} from "./cartContext";
 
 function App() {
-  const [cartList, setCartList] = useState([]);
+  useEffect(() => localStorage.setItem('cartStorage', JSON.stringify(cartList)));
+  const [cartList, setCartList] = useState(
+    localStorage.getItem('cartStorage')
+  );
   const cartValue =  { cartList, setCartList };
 
+  
+
   return (
+    
     <Router>
       <div className="App">
         <NavBar />
+        <CartContext.Provider value={cartValue}>
         <Switch>
+        
             <Route path="/cart">
               <Cart />
             </Route>
@@ -33,14 +41,16 @@ function App() {
               <About />
             </Route>
             <Route path="/order">
-              <CartContext.Provider value={cartValue}>
-              <Order />
-              </CartContext.Provider>
+              
+                <Order />
+              
             </Route>
             <Route path="/">
               <HomePage />
             </Route>
+            
           </Switch>
+          </CartContext.Provider>
       {/* {console.log(store)} */}
       </div>
 
